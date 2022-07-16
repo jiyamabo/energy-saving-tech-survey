@@ -147,16 +147,18 @@ hierarchy.cophenet(linkages, distance.pdist(resid_subset_scaled))[0]
 labels = hierarchy.fcluster(linkages, t=4, criterion="maxclust")
 list(zip(*np.unique(labels, return_counts=True)))
 
-# def cluster_plot(x, y, labels):
-#     for i in np.unique(labels):
-#         idx = labels == i
-#         plt.scatter(x[idx], y[idx], labels = i)
+# def cluster_plot(x, y, labls):
+#     for i in np.unique(labls):
+#         idx = labls == i
+#         plt.scatter(x[idx], y[idx], labls = i)
 #     plt.legend()
-#     plt.xlabel(x.name)
-#     plt.ylabel(y.name)
+#     plt.xlabel(x)
+#     plt.ylabel(y)
 
-# plt.scatter(resid_subset_scaled.gender, resid_subset_scaled.eff_lightbulb, c = labels)
-# plt.show()
+# cluster_plot(resid_subset_scaled.gender, resid_subset_scaled.eff_lightbulb, labels)
+# # plt.show()
+
+
 
 
 
