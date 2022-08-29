@@ -1,1 +1,1 @@
-insert readme
+The project objective was to create personas using a clustering algorithm based on cross-sectional survey-based data. Data was obtained from electricity customers. Using a set of variables, the project demonstrates data exploration, descriptive statistics, custom functions, and acts as a codebase, which may be adapted for other projects.
