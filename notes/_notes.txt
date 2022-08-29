@@ -18,16 +18,6 @@ difficult to push policy agenda based on just qual data
 what most people have not been able to do is to create user personas
 
 ---
-Aunty, 
-
-I have a few requests on the Excel file.
-
-1. I need objective(s) to conduct the data analysis. Are there specific questions you want me to address with the data? I'm guessing there are.
-
-2. I need to understand how to interprete values in Excel cells BC2:BJ2. For the questions asked on these columns, the values are "Adult1", "Adult2"... "Adult4". If you're alble to share the questionnaire that generated all responses, that might help. Similarly, I need to understand the values in the excel cells CK2 and CL2
-
-Finally, when are you hoping to get the analysis/results? It's likely I'll be able to start paying full attention to the data from June 23rd.
----
 COOLING & HEATING LOAD
 
 Number of Fans in your house including ceiling fans and/or portable fans	How many coolers (i.e. portable plug cooling appliances) do you own at your home ?	No. of air heaters (i.e. portable plug heating appliances) do you own at your home?	If an air heater is owned approximately how many months of the year is this used for (choose one)?	what month of the year do you typically Start using air heater home heating (choose one)?	what month of the year do you typically stop using air heater for home heating (choose one)?	Number of Air Conditioners	Type of AC	Do you have the ability to control your air conditioning system (i.e. change the temperature)?If so what best describes how this is used?	If you use cooling, what temperature setting do you use during Summer months?	If you use heating, what temperature setting do you use during Winter months?	If any air cooling (i.e. portable air cooler/air conditioning) is used at your residence, what month of the year do you typically start using home cooling (choose one)?
