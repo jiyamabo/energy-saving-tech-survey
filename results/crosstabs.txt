@@ -1,0 +1,183 @@
+>>> for i in crosstab_vars:
+...     print("-" * 20 + i + "-" * 20)
+...     resid[i].value_counts(dropna = False, sort=True, ascending=False)
+... 
+--------------------ac_num--------------------
+3 or more    128
+1.0          114
+2.0          113
+0.0           54
+Name: ac_num, dtype: int64
+--------------------ac_type--------------------
+Individual Window/Split AC                       350
+NaN                                               54
+Unsure but do have an air conditioning system      4
+Central Air conditioning                           1
+Name: ac_type, dtype: int64
+--------------------heaters_owned--------------------
+0.0          209
+1.0          123
+2.0           54
+3 or more     23
+Name: heaters_owned, dtype: int64
+--------------------coolers_owned--------------------
+0.0          221
+1.0          142
+2.0           33
+3 or more     13
+Name: coolers_owned, dtype: int64
+--------------------adult_num--------------------
+2.0          145
+3.0          105
+4.0           95
+5 or more     49
+1.0           15
+Name: adult_num, dtype: int64
+--------------------child_num--------------------
+0.0          204
+1.0          103
+2.0           86
+3.0            9
+4.0            6
+5 or more      1
+Name: child_num, dtype: int64
+--------------------temp_set_summer--------------------
+24-26 °C             181
+22-24 °C              70
+Greater than 26°C     67
+NaN                   54
+20-22 °C              22
+18-20 °C              10
+Not used               4
+Less than 18 °C        1
+Name: temp_set_summer, dtype: int64
+--------------------temp_set_winter--------------------
+Do not use in winter    257
+NaN                      54
+Greater than 22°C        35
+20-22°C                  29
+18-20°C                  15
+16-18°C                   8
+Less than 14 °C           7
+14-16 °C                  4
+Name: temp_set_winter, dtype: int64
+--------------------ac_control--------------------
+Turn equipment on or off as needed                                                     166
+Set one temperature and leave it there most of the time                                 95
+NaN                                                                                     54
+Program the thermostat to automatically adjust temperature during the day and night     47
+Manually adjust the temperature at night or when no one is at home                      45
+There is no temperature controls                                                         2
+Name: ac_control, dtype: int64
+--------------------house_type--------------------
+Apartment/Flat                    314
+Bungalows                          36
+House                               9
+Home                                5
+Floor                               4
+Government Quarters                 2
+Residential Plot                    2
+2-storey house                      2
+Single storey house                 1
+Kothi                               1
+Janta flats                         1
+Builder Flat                        1
+house in coloney                    1
+50 square ft house                  1
+SLUM                                1
+Govt. Accomodation                  1
+DDA FLAT                            1
+Self constructed house              1
+Free hold plot                      1
+NORMAL HOUSE                        1
+GOVERNMENT QUARTERS                 1
+GROUND FLOOR                        1
+NaN                                 1
+Chaddar ka makan                    1
+Builder Floor                       1
+Plot                                1
+GROUND FLOOR OF HOUSE               1
+house                               1
+Constructed on plot                 1
+HOUSE                               1
+Builder flat                        1
+A floor on a residential Plot       1
+un-authorized colony                1
+Colony house                        1
+Free Hold                           1
+independent house                   1
+Two room set Independent House      1
+SINGLE STOREYED HOUSE               1
+private residential house           1
+2 room set                          1
+kothi                               1
+Normal Home                         1
+2 storey house                      1
+Name: house_type, dtype: int64
+--------------------employ_num--------------------
+1.0          188
+2.0          118
+0.0           80
+3.0           13
+4.0            8
+5 or more      2
+Name: employ_num, dtype: int64
+--------------------employ_status--------------------
+Employed Full Time    182
+Retired               120
+Not Employed           76
+Employed Part Time     19
+NaN                     9
+Student                 3
+Name: employ_status, dtype: int64
+--------------------gender--------------------
+Male                 300
+Female               102
+Prefer not to say      7
+Name: gender, dtype: int64
+--------------------geyser_heater--------------------
+1.0            151
+2.0            107
+3 or more       78
+None            71
+Do not know      2
+Name: geyser_heater, dtype: int64
+--------------------start_use_airheater--------------------
+NaN         209
+December    151
+Not used     26
+November     21
+October       2
+Name: start_use_airheater, dtype: int64
+--------------------ac_control--------------------
+Turn equipment on or off as needed                                                     166
+Set one temperature and leave it there most of the time                                 95
+NaN                                                                                     54
+Program the thermostat to automatically adjust temperature during the day and night     47
+Manually adjust the temperature at night or when no one is at home                      45
+There is no temperature controls                                                         2
+Name: ac_control, dtype: int64
+--------------------roof_solar--------------------
+Do not have this on your roof    396
+Self owned                        11
+Third party owned                  2
+Name: roof_solar, dtype: int64
+--------------------solar_heater--------------------
+None           390
+Do not know     14
+1.0              3
+3 or more        2
+Name: solar_heater, dtype: int64
+--------------------washing_machine--------------------
+1.0            353
+None            41
+2.0             12
+Do not know      2
+3 or more        1
+Name: washing_machine, dtype: int64
+--------------------dryer--------------------
+None           369
+1.0             24
+Do not know     13
+3 or more        3
+Name: dryer, dtype: int64

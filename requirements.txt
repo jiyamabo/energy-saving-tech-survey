@@ -1,0 +1,10 @@
+# this list of requirements was edited from "pip freeze > requirements.txt file"
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib

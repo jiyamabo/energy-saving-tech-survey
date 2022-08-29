@@ -1,0 +1,309 @@
+>>> resid[var_select].head()
+       ac_num                     ac_type   age heaters_owned coolers_owned  \
+1   3 or more  Individual Window/Split AC  35.0     3 or more     3 or more   
+5         2.0  Individual Window/Split AC  38.0           1.0           1.0   
+7   3 or more  Individual Window/Split AC  67.0     3 or more           1.0   
+8         1.0  Individual Window/Split AC  35.0           2.0           0.0   
+12  3 or more  Individual Window/Split AC  34.0           1.0           0.0   
+
+    adult_num  child_num temp_set_summer       temp_set_winter  \
+1   5 or more  5 or more        18-20 °C     Greater than 22°C   
+5         4.0        2.0        24-26 °C     Greater than 22°C   
+7         3.0        0.0        24-26 °C  Do not use in winter   
+8         2.0        2.0        22-24 °C  Do not use in winter   
+12        2.0        0.0        24-26 °C               18-20°C   
+
+                                           ac_control      house_type  \
+1                  Turn equipment on or off as needed  Apartment/Flat   
+5   Program the thermostat to automatically adjust...  Apartment/Flat   
+7   Set one temperature and leave it there most of...  Apartment/Flat   
+8   Set one temperature and leave it there most of...  Apartment/Flat   
+12  Program the thermostat to automatically adjust...  Apartment/Flat   
+
+    buy_electric_vehicle electric_vehicle employ_num       employ_status  \
+1                      1             None        2.0  Employed Full Time   
+5                      1             None        2.0  Employed Full Time   
+7                      5             None        2.0             Retired   
+8                      3             None        1.0  Employed Full Time   
+12                     5             None        1.0  Employed Full Time   
+
+   gender geyser_heater start_use_airheater  child_num  \
+1    Male     3 or more            November  5 or more   
+5    Male           2.0            November        2.0   
+7    Male           2.0            December        0.0   
+8    Male           1.0            December        2.0   
+12   Male     3 or more            December        0.0   
+
+                                           ac_control  perp10_roof_solar  \
+1                  Turn equipment on or off as needed                  1   
+5   Program the thermostat to automatically adjust...                  2   
+7   Set one temperature and leave it there most of...                  4   
+8   Set one temperature and leave it there most of...                  5   
+12  Program the thermostat to automatically adjust...                  2   
+
+    perp5_roof_solar                     roof_solar solar_heater  \
+1                  1  Do not have this on your roof    3 or more   
+5                  4  Do not have this on your roof         None   
+7                  1  Do not have this on your roof         None   
+8                  3  Do not have this on your roof         None   
+12                 5  Do not have this on your roof         None   
+
+   washing_machine      dryer  increase_ac  turnoff_ac  turnoff_water  \
+1        3 or more  3 or more            1           1              1   
+5              1.0       None            5           3              5   
+7              1.0       None            4           5              5   
+8              1.0       None            4           3              3   
+12             1.0       None            5           5              4   
+
+    stop_laundry  eff_ac  perp_active  
+1              1       2            3  
+5              4       5            5  
+7              5       5            5  
+8              3       4            5  
+12             5       5            5  
+
+
+
+>>> resid[var_select].dtypes
+ac_num                   object
+ac_type                  object
+age                     float64
+heaters_owned            object
+coolers_owned            object
+adult_num                object
+child_num                object
+temp_set_summer          object
+temp_set_winter          object
+ac_control               object
+house_type               object
+buy_electric_vehicle      int64
+electric_vehicle         object
+employ_num               object
+employ_status            object
+gender                   object
+geyser_heater            object
+start_use_airheater      object
+child_num                object
+ac_control               object
+perp10_roof_solar         int64
+perp5_roof_solar          int64
+roof_solar               object
+solar_heater             object
+washing_machine          object
+dryer                    object
+increase_ac               int64
+turnoff_ac                int64
+turnoff_water             int64
+stop_laundry              int64
+eff_ac                    int64
+perp_active               int64
+dtype: object
+
+
+>>> resid["gender"].value_counts()
+Male                 300
+Female               102
+Prefer not to say      7
+Name: gender, dtype: int64
+
+
+
+>>> for i in resid[["perp5_roof_solar", "perp10_roof_solar", "buy_electric_vehicle", "perp_energy", "perp_active",
+... "perp_green1", "perp_green2", "perp_reduce", "elect_consume", "increase_ac", "turnoff_ac", 
+... "turnoff_water", "stop_laundry", "eff_lightbulb", "eff_ac", "eff_cook", "eff_heat", "eff_cool", 
+... "elect_cook1", "cool_load", "elect_cook2", "heat_load", "light", "comp_tv"]]:
+...     print("-" * 20 + i + "-" * 20) 
+...     print(resid[i].value_counts())
+... 
+--------------------perp5_roof_solar--------------------
+Not at all likely    170
+Very likely           60
+Moderately likely     60
+Slightly likely       56
+Extremely likely      54
+Name: perp5_roof_solar, dtype: int64
+--------------------perp10_roof_solar--------------------
+Not at all interested    109
+Extremely interested      93
+Very interested           72
+Slightly interested       65
+Moderately interested     61
+Name: perp10_roof_solar, dtype: int64
+--------------------buy_electric_vehicle--------------------
+Not at all likely    160
+Slightly likely       76
+Moderately likely     75
+Very likely           52
+Extremely likely      46
+Name: buy_electric_vehicle, dtype: int64
+--------------------perp_energy--------------------
+Strongly Agree       340
+Agree                 65
+Indifferent            5
+Strongly Disagree      2
+Disagree               1
+Name: perp_energy, dtype: int64
+--------------------perp_active--------------------
+Strongly Agree       312
+Agree                 89
+Indifferent            8
+Disagree               3
+Strongly Disagree      1
+Name: perp_active, dtype: int64
+--------------------perp_green1--------------------
+Strongly Agree       300
+Agree                101
+Indifferent           10
+Strongly Disagree      1
+Disagree               1
+Name: perp_green1, dtype: int64
+--------------------perp_green2--------------------
+Strongly Agree       313
+Agree                 90
+Indifferent            8
+Strongly Disagree      1
+Disagree               1
+Name: perp_green2, dtype: int64
+--------------------perp_reduce--------------------
+Strongly Agree       296
+Agree                103
+Indifferent           10
+Disagree               3
+Strongly Disagree      1
+Name: perp_reduce, dtype: int64
+--------------------elect_consume--------------------
+Strongly Agree       311
+Agree                 92
+Indifferent            6
+Disagree               2
+Strongly Disagree      2
+Name: elect_consume, dtype: int64
+--------------------increase_ac--------------------
+Extremely likely     186
+Very likely          127
+Moderately likely     43
+Not at all likely     31
+Slightly likely       18
+Name: increase_ac, dtype: int64
+--------------------turnoff_ac--------------------
+Extremely likely     156
+Very likely           95
+Moderately likely     71
+Not at all likely     47
+Slightly likely       37
+Name: turnoff_ac, dtype: int64
+--------------------turnoff_water--------------------
+Extremely likely     124
+Very likely           81
+Moderately likely     78
+Not at all likely     75
+Slightly likely       44
+Name: turnoff_water, dtype: int64
+--------------------stop_laundry--------------------
+Extremely likely     238
+Very likely           85
+Moderately likely     36
+Not at all likely     22
+Slightly likely       21
+Name: stop_laundry, dtype: int64
+--------------------eff_lightbulb--------------------
+Extremely likely     328
+Very likely           66
+Not at all likely      9
+Moderately likely      6
+Slightly likely        4
+Name: eff_lightbulb, dtype: int64
+--------------------eff_ac--------------------
+Extremely likely     272
+Very likely           86
+Moderately likely     32
+Not at all likely     14
+Slightly likely        9
+Name: eff_ac, dtype: int64
+--------------------eff_cook--------------------
+Extremely likely     197
+Very likely           82
+Not at all likely     67
+Moderately likely     37
+Slightly likely       30
+Name: eff_cook, dtype: int64
+--------------------eff_heat--------------------
+Extremely likely     180
+Very likely           93
+Moderately likely     61
+Not at all likely     48
+Slightly likely       31
+Name: eff_heat, dtype: int64
+--------------------eff_cool--------------------
+Extremely likely     154
+Very likely          118
+Moderately likely     79
+Not at all likely     38
+Slightly likely       24
+Name: eff_cool, dtype: int64
+--------------------elect_cook1--------------------
+Extremely likely     157
+Not at all likely     95
+Very likely           82
+Moderately likely     58
+Slightly likely       21
+Name: elect_cook1, dtype: int64
+--------------------cool_load--------------------
+Extremely likely     132
+Very likely          109
+Moderately likely     85
+Not at all likely     49
+Slightly likely       38
+Name: cool_load, dtype: int64
+--------------------elect_cook2--------------------
+Extremely likely     173
+Not at all likely     90
+Very likely           81
+Moderately likely     46
+Slightly likely       23
+Name: elect_cook2, dtype: int64
+--------------------heat_load--------------------
+Extremely likely     150
+Very likely           89
+Moderately likely     77
+Not at all likely     67
+Slightly likely       30
+Name: heat_load, dtype: int64
+--------------------light--------------------
+Extremely likely     147
+Very likely          109
+Moderately likely     80
+Not at all likely     49
+Slightly likely       28
+Name: light, dtype: int64
+--------------------comp_tv--------------------
+Extremely likely     109
+Very likely          101
+Moderately likely     83
+Not at all likely     77
+Slightly likely       43
+Name: comp_tv, dtype: int64
+
+
+>>> resid.columns
+Index(['id', 'gender', 'age', 'employ_status', 'residence_type', 'house_type',
+       'adult_num', 'child_num', 'employ_num', 'fans', 'coolers_owned',
+       'heaters_owned', 'start_use_airheater', 'stop_use_airheater', 'ac_num',
+       'ac_type', 'ac_control', 'temp_set_summer', 'temp_set_winter',
+       'home_cool_start', 'home_cool_end', 'lightbulb_num', 'incand_halo_num',
+       'cfl_num', 'led_num', 'tube_num', 'electric_heater', 'induction_cooker',
+       'electric_cooker', 'microwave', 'oven', 'kettle', 'refrig_less_300',
+       'refrig_great_300', 'washing_machine', 'dishwasher', 'dryer',
+       'waterpump', 'solar_heater', 'geyser_heater', 'geyser_on', 'geyser_tod',
+       'voltage_reg', 'ups', 'hair_dryer', 'electric_toaster', 'coffee_maker',
+       'laptop', 'tv', 'wifi', 'electric_iron', 'battery_sys',
+       'battery_sys_size', 'adult1', 'adult2', 'adult3', 'adult4', 'adult5',
+       'adult6', 'adult7', 'adult8', 'roof_solar', 'perp5_roof_solar',
+       'perp10_roof_solar', 'buy_electric_vehicle', 'perp_energy',
+       'perp_active', 'perp_green1', 'perp_green2', 'perp_reduce',
+       'elect_consume', 'increase_ac', 'turnoff_ac', 'turnoff_water',
+       'stop_laundry', 'eff_lightbulb', 'eff_ac', 'eff_cook', 'eff_heat',
+       'eff_cool', 'elect_cook1', 'cool_load', 'elect_cook2', 'heat_load',
+       'light', 'comp_tv', 'wtp_month'],
+      dtype='object')
+

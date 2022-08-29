@@ -1,0 +1,981 @@
+>>> resid.pivot_table(values= ["eff_lightbulb", "elect_consume", "eff_ac", "perp_active", "perp_energy", "perp_green1", "perp_reduce", "perp_green2", "stop_laundry", "comp_tv", "cool_load", "eff_cook", "eff_cool", "eff_heat", "elect_cook1", "elect_cook2", "heat_load", "increase_ac", "light", "turnoff_ac", "turnoff_water", "buy_electric_vehicle", "perp10_roof_solar", "perp5_roof_solar"], index="geyser_on", aggfunc= [np.mean, sem])
+                                 mean                                          \
+                 buy_electric_vehicle   comp_tv cool_load    eff_ac  eff_cook   
+geyser_on                                                                       
+15-30 min                    2.426667  3.289474  3.703947  4.552632  3.842105   
+30-45 min                    2.688889  3.333333  3.400000  4.466667  3.777778   
+45-60 min                    2.200000  3.350000  3.300000  4.000000  3.750000   
+More than 60 min             2.391304  2.750000  3.291667  4.250000  2.791667   
+less than 15 min             2.391753  3.278351  3.597938  4.494845  3.793814   
+
+                                                                              \
+                  eff_cool  eff_heat eff_lightbulb elect_consume elect_cook1   
+geyser_on                                                                      
+15-30 min         3.921053  4.203947      4.776316      4.723684    3.532895   
+30-45 min         3.444444  3.355556      4.711111      4.711111    3.511111   
+45-60 min         3.800000  3.750000      4.750000      4.750000    3.250000   
+More than 60 min  3.458333  3.291667      4.541667      4.750000    2.833333   
+less than 15 min  3.752577  3.525773      4.690722      4.721649    3.371134   
+
+                                                              \
+                 elect_cook2 heat_load increase_ac     light   
+geyser_on                                                      
+15-30 min           3.690789  3.736842    4.101351  3.763158   
+30-45 min           3.600000  3.555556    4.088889  3.644444   
+45-60 min           2.900000  3.300000    3.900000  3.100000   
+More than 60 min    3.208333  3.291667    3.666667  2.916667   
+less than 15 min    3.350515  3.402062    4.115789  3.773196   
+
+                                                                             \
+                 perp10_roof_solar perp5_roof_solar perp_active perp_energy   
+geyser_on                                                                     
+15-30 min                 2.841379         2.455172    4.743421    4.835526   
+30-45 min                 2.844444         2.133333    4.666667    4.822222   
+45-60 min                 2.800000         2.550000    4.800000    4.700000   
+More than 60 min          2.666667         2.291667    4.541667    4.791667   
+less than 15 min          2.391304         2.652174    4.793814    4.845361   
+
+                                                                              \
+                 perp_green1 perp_green2 perp_reduce stop_laundry turnoff_ac   
+geyser_on                                                                      
+15-30 min           4.684211    4.697368    4.631579     4.194631   3.604027   
+30-45 min           4.777778    4.777778    4.733333     4.422222   3.266667   
+45-60 min           4.650000    4.750000    4.550000     4.000000   3.400000   
+More than 60 min    4.666667    4.708333    4.625000     3.875000   3.083333   
+less than 15 min    4.742268    4.773196    4.742268     4.421053   4.000000   
+
+                                                sem                      \
+                 turnoff_water buy_electric_vehicle   comp_tv cool_load   
+geyser_on                                                                 
+15-30 min             3.346939                  NaN  0.118310  0.103038   
+30-45 min             2.777778             0.200560  0.205971  0.180907   
+45-60 min             3.000000             0.277204  0.274101  0.179179   
+More than 60 min      2.666667                  NaN  0.314216  0.332313   
+less than 15 min      3.663158             0.149136  0.148548  0.147764   
+
+                                                                        \
+                    eff_ac  eff_cook  eff_cool  eff_heat eff_lightbulb   
+geyser_on                                                                
+15-30 min         0.063167  0.113986  0.091712  0.088232      0.046858   
+30-45 min         0.140705  0.212937  0.178534  0.213569      0.103583   
+45-60 min         0.271448  0.279803  0.212751  0.250000      0.123010   
+More than 60 min  0.235061  0.356000  0.312651  0.337720      0.208333   
+less than 15 min  0.097349  0.163153  0.145103  0.159932      0.082071   
+
+                                                                              \
+                 elect_consume elect_cook1 elect_cook2 heat_load increase_ac   
+geyser_on                                                                      
+15-30 min             0.050440    0.127281    0.123922  0.110347         NaN   
+30-45 min             0.075359    0.230551    0.234413  0.207329    0.148468   
+45-60 min             0.099340    0.323427    0.339504  0.179179    0.298240   
+More than 60 min      0.108514    0.344031    0.370952  0.348283    0.266938   
+less than 15 min      0.059965    0.170480    0.169673  0.162310         NaN   
+
+                                                                           \
+                     light perp10_roof_solar perp5_roof_solar perp_active   
+geyser_on                                                                   
+15-30 min         0.107548               NaN              NaN    0.041218   
+30-45 min         0.183004          0.220091         0.214617    0.105409   
+45-60 min         0.239517          0.359825         0.276015    0.116980   
+More than 60 min  0.288152          0.286576         0.291667    0.134315   
+less than 15 min  0.138649               NaN              NaN    0.054714   
+
+                                                                               \
+                 perp_energy perp_green1 perp_green2 perp_reduce stop_laundry   
+geyser_on                                                                       
+15-30 min           0.035477    0.047065    0.045769    0.052544          NaN   
+30-45 min           0.057638    0.070273    0.070273    0.073855     0.140306   
+45-60 min           0.146898    0.109424    0.099340    0.211200     0.217643   
+More than 60 min    0.103895    0.130032    0.112275    0.145120     0.277883   
+less than 15 min    0.044789    0.057284    0.055815    0.057284          NaN   
+
+                                           
+                 turnoff_ac turnoff_water  
+geyser_on                                  
+15-30 min               NaN           NaN  
+30-45 min          0.223381      0.224483  
+45-60 min          0.284697      0.324443  
+More than 60 min   0.334689      0.316609  
+less than 15 min        NaN           NaN 
+
+
+
+
+
+>>> resid_subset_scaled.loc[:, resid_subset_scaled.isnull().any()].columns
+Index([], dtype='object')
+>>> 
+>>> 
+>>> for i in resid.columns:
+...     print("-" * 20 + i + "-" * 20)
+...     print(resid[i].value_counts())
+... 
+--------------------id--------------------
+1.0      1
+272.0    1
+282.0    1
+281.0    1
+280.0    1
+        ..
+136.0    1
+135.0    1
+134.0    1
+133.0    1
+413.0    1
+Name: id, Length: 409, dtype: int64
+--------------------gender--------------------
+Male                 300
+Female               102
+Prefer not to say      7
+Name: gender, dtype: int64
+--------------------age--------------------
+50.0    15
+60.0    15
+38.0    15
+45.0    15
+65.0    13
+67.0    12
+56.0    12
+48.0    12
+42.0    11
+51.0    11
+62.0    11
+47.0    11
+55.0    11
+35.0    11
+68.0    11
+72.0    10
+44.0    10
+64.0    10
+46.0     9
+52.0     9
+34.0     9
+75.0     8
+57.0     8
+41.0     8
+54.0     8
+40.0     8
+32.0     7
+36.0     7
+39.0     7
+70.0     7
+61.0     6
+73.0     6
+85.0     5
+59.0     5
+33.0     5
+86.0     4
+27.0     4
+71.0     4
+63.0     4
+31.0     4
+53.0     4
+66.0     4
+30.0     3
+76.0     3
+58.0     3
+49.0     3
+74.0     3
+37.0     3
+79.0     2
+29.0     2
+81.0     2
+78.0     2
+69.0     2
+23.0     2
+43.0     2
+77.0     2
+83.0     2
+25.0     1
+88.0     1
+90.0     1
+84.0     1
+80.0     1
+87.0     1
+24.0     1
+Name: age, dtype: int64
+--------------------employ_status--------------------
+Employed Full Time    182
+Retired               120
+Not Employed           76
+Employed Part Time     19
+Student                 3
+Name: employ_status, dtype: int64
+--------------------residence_type--------------------
+Owned     365
+Rented     44
+Name: residence_type, dtype: int64
+--------------------house_type--------------------
+Apartment/Flat                    314
+Bungalows                          36
+House                               9
+Home                                5
+Floor                               4
+Government Quarters                 2
+Residential Plot                    2
+2-storey house                      2
+Kothi                               1
+Janta flats                         1
+Builder Flat                        1
+house in coloney                    1
+50 square ft house                  1
+SLUM                                1
+Free hold plot                      1
+DDA FLAT                            1
+Govt. Accomodation                  1
+Builder Floor                       1
+GOVERNMENT QUARTERS                 1
+GROUND FLOOR                        1
+Self constructed house              1
+Single storey house                 1
+NORMAL HOUSE                        1
+Chaddar ka makan                    1
+Free Hold                           1
+Normal Home                         1
+GROUND FLOOR OF HOUSE               1
+house                               1
+Constructed on plot                 1
+HOUSE                               1
+Builder flat                        1
+A floor on a residential Plot       1
+un-authorized colony                1
+Plot                                1
+Colony house                        1
+independent house                   1
+Two room set Independent House      1
+SINGLE STOREYED HOUSE               1
+private residential house           1
+2 room set                          1
+kothi                               1
+2 storey house                      1
+Name: house_type, dtype: int64
+--------------------adult_num--------------------
+2.0          145
+3.0          105
+4.0           95
+5 or more     49
+1.0           15
+Name: adult_num, dtype: int64
+--------------------child_num--------------------
+0.0          204
+1.0          103
+2.0           86
+3.0            9
+4.0            6
+5 or more      1
+Name: child_num, dtype: int64
+--------------------employ_num--------------------
+1.0          188
+2.0          118
+0.0           80
+3.0           13
+4.0            8
+5 or more      2
+Name: employ_num, dtype: int64
+--------------------fans--------------------
+3 or more    365
+2.0           36
+1.0            7
+0.0            1
+Name: fans, dtype: int64
+--------------------coolers_owned--------------------
+0.0          221
+1.0          142
+2.0           33
+3 or more     13
+Name: coolers_owned, dtype: int64
+--------------------heaters_owned--------------------
+0.0          209
+1.0          123
+2.0           54
+3 or more     23
+Name: heaters_owned, dtype: int64
+--------------------start_use_airheater--------------------
+December    151
+Not used     26
+November     21
+October       2
+Name: start_use_airheater, dtype: int64
+--------------------stop_use_airheater--------------------
+February    96
+January     56
+Not used    27
+March       18
+April        3
+Name: stop_use_airheater, dtype: int64
+--------------------ac_num--------------------
+3 or more    128
+1.0          114
+2.0          113
+0.0           54
+Name: ac_num, dtype: int64
+--------------------ac_type--------------------
+Individual Window/Split AC                       350
+Unsure but do have an air conditioning system      4
+Central Air conditioning                           1
+Name: ac_type, dtype: int64
+--------------------ac_control--------------------
+Turn equipment on or off as needed                                                     166
+Set one temperature and leave it there most of the time                                 95
+Program the thermostat to automatically adjust temperature during the day and night     47
+Manually adjust the temperature at night or when no one is at home                      45
+There is no temperature controls                                                         2
+Name: ac_control, dtype: int64
+--------------------temp_set_summer--------------------
+24-26 °C             181
+22-24 °C              70
+Greater than 26°C     67
+20-22 °C              22
+18-20 °C              10
+Not used               4
+Less than 18 °C        1
+Name: temp_set_summer, dtype: int64
+--------------------temp_set_winter--------------------
+Do not use in winter    257
+Greater than 22°C        35
+20-22°C                  29
+18-20°C                  15
+16-18°C                   8
+Less than 14 °C           7
+14-16 °C                  4
+Name: temp_set_winter, dtype: int64
+--------------------home_cool_start--------------------
+May                         156
+April                       100
+June                         63
+March                        22
+cooling is used all year      5
+August                        5
+July                          3
+January                       1
+Name: home_cool_start, dtype: int64
+--------------------home_cool_end--------------------
+September                   119
+October                      91
+July                         58
+August                       56
+November                     22
+cooling is used all year      5
+December                      4
+Name: home_cool_end, dtype: int64
+--------------------lightbulb_num--------------------
+5-8                   101
+9-12                   86
+13-16                  57
+17-20                  42
+1-4                    29
+21-24                  26
+33-44                  19
+25-32                  16
+45-56                   8
+0.0                     7
+Do not know/Unsure      7
+57-80                   6
+80 or more              5
+Name: lightbulb_num, dtype: int64
+--------------------incand_halo_num--------------------
+0.0                   317
+1-4                    55
+5-8                    14
+Do not know/Unsure     10
+9-12                    4
+13-16                   3
+17-20                   3
+45-56                   1
+21-24                   1
+25-32                   1
+Name: incand_halo_num, dtype: int64
+--------------------cfl_num--------------------
+0.0                   159
+1-4                   135
+5-8                    46
+9-12                   28
+13-16                  13
+17-20                  10
+Do not know/Unsure     10
+29-32                   4
+33-44                   3
+21-24                   1
+Name: cfl_num, dtype: int64
+--------------------led_num--------------------
+1-4                   139
+5-8                   116
+9-12                   42
+0.0                    33
+13-16                  22
+17-20                  16
+Do not know/Unsure     10
+21-24                   9
+33-44                   7
+45-56                   6
+25-28                   5
+29-32                   3
+57-80                   1
+Name: led_num, dtype: int64
+--------------------tube_num--------------------
+1-4                   211
+5-8                    95
+0.0                    64
+9-12                   18
+13-16                  11
+Do not know/Unsure      5
+33-44                   1
+29-32                   1
+57-80                   1
+21-24                   1
+17-20                   1
+Name: tube_num, dtype: int64
+--------------------electric_heater--------------------
+Do not own                                 330
+Little to no use (A few times per year)     28
+Rarely Use (A few times per month)          25
+Do not Know                                 12
+Frequently Use (Almost every day)           10
+Infrequently Use (A few times per week)      4
+Name: electric_heater, dtype: int64
+--------------------induction_cooker--------------------
+Do not own                                 315
+Little to no use (A few times per year)     31
+Rarely Use (A few times per month)          26
+Frequently Use (Almost every day)           17
+Do not Know                                 11
+Infrequently Use (A few times per week)      9
+Name: induction_cooker, dtype: int64
+--------------------electric_cooker--------------------
+Do not own                                 322
+Little to no use (A few times per year)     32
+Rarely Use (A few times per month)          20
+Do not Know                                 14
+Frequently Use (Almost every day)           12
+Infrequently Use (A few times per week)      9
+Name: electric_cooker, dtype: int64
+--------------------microwave--------------------
+Do not own                                 123
+Frequently Use (Almost every day)          102
+Infrequently Use (A few times per week)     72
+Rarely Use (A few times per month)          51
+Little to no use (A few times per year)     50
+Do not Know                                 11
+Name: microwave, dtype: int64
+--------------------oven--------------------
+Do not own                                 264
+Rarely Use (A few times per month)          51
+Little to no use (A few times per year)     41
+Infrequently Use (A few times per week)     25
+Do not Know                                 17
+Frequently Use (Almost every day)           11
+Name: oven, dtype: int64
+--------------------kettle--------------------
+Do not own                                 235
+Little to no use (A few times per year)     48
+Frequently Use (Almost every day)           47
+Rarely Use (A few times per month)          37
+Infrequently Use (A few times per week)     29
+Do not Know                                 13
+Name: kettle, dtype: int64
+--------------------refrig_less_300--------------------
+None           226
+1.0            156
+2.0             14
+Do not know     11
+3 or more        2
+Name: refrig_less_300, dtype: int64
+--------------------refrig_great_300--------------------
+1.0            243
+None           142
+2.0             15
+Do not know      6
+3 or more        3
+Name: refrig_great_300, dtype: int64
+--------------------washing_machine--------------------
+1.0            353
+None            41
+2.0             12
+Do not know      2
+3 or more        1
+Name: washing_machine, dtype: int64
+--------------------dishwasher--------------------
+None           383
+Do not know     13
+1.0             11
+3 or more        2
+Name: dishwasher, dtype: int64
+--------------------dryer--------------------
+None           369
+1.0             24
+Do not know     13
+3 or more        3
+Name: dryer, dtype: int64
+--------------------waterpump--------------------
+1.0            242
+None           116
+2.0             42
+Do not know      6
+3 or more        3
+Name: waterpump, dtype: int64
+--------------------solar_heater--------------------
+None           390
+Do not know     14
+1.0              3
+3 or more        2
+Name: solar_heater, dtype: int64
+--------------------geyser_heater--------------------
+1.0            151
+2.0            107
+3 or more       78
+None            71
+Do not know      2
+Name: geyser_heater, dtype: int64
+--------------------geyser_on--------------------
+15-30 min           152
+less than 15 min     97
+30-45 min            45
+More than 60 min     24
+45-60 min            20
+Name: geyser_on, dtype: int64
+--------------------geyser_tod--------------------
+Morning hours (6:00-10:00 hrs)      267
+Early Morning (Before 6:00 hrs)      35
+Afternoon (10:00 hrs -18:00 hrs)     26
+Evening (18:00 hrs - 22:00 hrs)       7
+Night (22:00 hrs - 00:00 hrs)         3
+Name: geyser_tod, dtype: int64
+--------------------voltage_reg--------------------
+None           175
+1.0             99
+3 or more       71
+2.0             60
+Do not know      4
+Name: voltage_reg, dtype: int64
+--------------------ups--------------------
+None           246
+1.0            141
+Do not know     12
+2.0              8
+3 or more        2
+Name: ups, dtype: int64
+--------------------hair_dryer--------------------
+None           232
+1.0            148
+2.0             18
+Do not know      9
+3 or more        2
+Name: hair_dryer, dtype: int64
+--------------------electric_toaster--------------------
+1.0            204
+None           193
+Do not know      6
+2.0              5
+3 or more        1
+Name: electric_toaster, dtype: int64
+--------------------coffee_maker--------------------
+None           367
+1.0             28
+Do not know     13
+3 or more        1
+Name: coffee_maker, dtype: int64
+--------------------laptop--------------------
+1.0            203
+2.0             90
+None            83
+3 or more       31
+Do not know      2
+Name: laptop, dtype: int64
+--------------------tv--------------------
+1.0          229
+2.0          121
+3 or more     32
+None          27
+Name: tv, dtype: int64
+--------------------wifi--------------------
+1.0            275
+None           105
+2.0             24
+3 or more        3
+Do not know      2
+Name: wifi, dtype: int64
+--------------------electric_iron--------------------
+1.0            312
+None            78
+2.0             14
+Do not know      3
+3 or more        2
+Name: electric_iron, dtype: int64
+--------------------battery_sys--------------------
+None           246
+1.0            140
+Do not know     12
+2.0              8
+3 or more        3
+Name: battery_sys, dtype: int64
+--------------------battery_sys_size--------------------
+None              233
+1-2 kWh           117
+3-6 kWh            31
+10 kWh or more     17
+7-10 kWh           11
+Name: battery_sys_size, dtype: int64
+--------------------adult1--------------------
+All the day                                                                     191
+00:00-07:00                                                                      51
+00:00-07:00, 21:00-00:00                                                         40
+07:00-14:00                                                                      38
+00:00-07:00, 17:00-21:00, 21:00-00:00                                            29
+17:00-21:00                                                                      10
+14:00-17:00                                                                       8
+21:00-00:00                                                                       7
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00                                7
+07:00-14:00, 14:00-17:00                                                          4
+00:00-07:00, 07:00-14:00                                                          3
+00:00-07:00, 14:00-17:00, 21:00-00:00                                             3
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                2
+00:00-07:00, 07:00-14:00, 21:00-00:00                                             2
+00:00-07:00, 17:00-21:00                                                          2
+14:00-17:00, 17:00-21:00                                                          1
+00:00-07:00, All the day                                                          1
+14:00-17:00, 17:00-21:00, All the day                                             1
+07:00-14:00, 21:00-00:00                                                          1
+00:00-07:00, 07:00-14:00, 17:00-21:00                                             1
+21:00-00:00, All the day                                                          1
+17:00-21:00, 21:00-00:00                                                          1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 21:00-00:00                                1
+17:00-21:00, All the day                                                          1
+07:00-14:00, 14:00-17:00, 17:00-21:00, All the day                                1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      1
+07:00-14:00, 17:00-21:00, 21:00-00:00                                             1
+Name: adult1, dtype: int64
+--------------------adult2--------------------
+All the day                                                                                     193
+Not Applicable                                                                                   51
+00:00-07:00                                                                                      32
+07:00-14:00                                                                                      30
+00:00-07:00, 17:00-21:00, 21:00-00:00                                                            22
+00:00-07:00, 21:00-00:00                                                                         17
+21:00-00:00                                                                                      14
+17:00-21:00                                                                                      11
+14:00-17:00                                                                                       9
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                                9
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00                                                6
+00:00-07:00, 14:00-17:00, 17:00-21:00                                                             3
+17:00-21:00, 21:00-00:00                                                                          2
+07:00-14:00, 14:00-17:00                                                                          2
+00:00-07:00, 07:00-14:00, 21:00-00:00                                                             2
+14:00-17:00, 17:00-21:00                                                                          2
+Not Applicable, 00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      1
+Not Applicable, 17:00-21:00, 21:00-00:00                                                          1
+07:00-14:00, 17:00-21:00, 21:00-00:00                                                             1
+17:00-21:00, All the day                                                                          1
+Name: adult2, dtype: int64
+--------------------adult3--------------------
+Not Applicable                                        180
+All the day                                            91
+00:00-07:00, 17:00-21:00, 21:00-00:00                  24
+00:00-07:00                                            24
+00:00-07:00, 21:00-00:00                               22
+07:00-14:00                                            22
+17:00-21:00                                            10
+21:00-00:00                                             9
+14:00-17:00                                             7
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00      7
+07:00-14:00, 14:00-17:00                                3
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00      2
+00:00-07:00, 17:00-21:00                                2
+00:00-07:00, 07:00-14:00, 21:00-00:00                   2
+00:00-07:00, 07:00-14:00                                1
+17:00-21:00, 21:00-00:00                                1
+07:00-14:00, 14:00-17:00, 17:00-21:00                   1
+14:00-17:00, All the day                                1
+Name: adult3, dtype: int64
+--------------------adult4--------------------
+Not Applicable                                        262
+All the day                                            54
+07:00-14:00                                            17
+00:00-07:00, 17:00-21:00, 21:00-00:00                  15
+00:00-07:00, 21:00-00:00                               14
+00:00-07:00                                            13
+17:00-21:00                                             7
+21:00-00:00                                             7
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00      6
+14:00-17:00                                             5
+00:00-07:00, 07:00-14:00, 21:00-00:00                   2
+Not Applicable, 00:00-07:00                             1
+07:00-14:00, 14:00-17:00, 17:00-21:00                   1
+14:00-17:00, 17:00-21:00, 21:00-00:00                   1
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00      1
+14:00-17:00, All the day                                1
+07:00-14:00, 14:00-17:00                                1
+00:00-07:00, 17:00-21:00                                1
+Name: adult4, dtype: int64
+--------------------adult5--------------------
+All the day                                                                     271
+00:00-07:00                                                                      35
+07:00-14:00                                                                      18
+21:00-00:00                                                                      15
+00:00-07:00, 17:00-21:00, 21:00-00:00                                            12
+00:00-07:00, 21:00-00:00                                                         11
+14:00-17:00                                                                       8
+17:00-21:00                                                                       6
+07:00-14:00, 14:00-17:00                                                          6
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00                                4
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                4
+00:00-07:00, 07:00-14:00, 21:00-00:00                                             3
+00:00-07:00, 21:00-00:00, All the day                                             3
+00:00-07:00, 07:00-14:00                                                          2
+00:00-07:00, 14:00-17:00, 21:00-00:00                                             1
+14:00-17:00, 21:00-00:00                                                          1
+07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                1
+17:00-21:00, 21:00-00:00                                                          1
+17:00-21:00, All the day                                                          1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      1
+07:00-14:00, 14:00-17:00, 17:00-21:00                                             1
+00:00-07:00, All the day                                                          1
+07:00-14:00, 17:00-21:00, 21:00-00:00                                             1
+00:00-07:00, 17:00-21:00                                                          1
+14:00-17:00, All the day                                                          1
+Name: adult5, dtype: int64
+--------------------adult6--------------------
+All the day                                                                     279
+Not applicable                                                                   48
+00:00-07:00                                                                      23
+21:00-00:00                                                                      11
+07:00-14:00                                                                       9
+17:00-21:00                                                                       8
+00:00-07:00, 17:00-21:00, 21:00-00:00                                             6
+14:00-17:00                                                                       4
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                4
+00:00-07:00, 21:00-00:00                                                          2
+17:00-21:00, 21:00-00:00                                                          2
+00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      2
+07:00-14:00, 14:00-17:00                                                          2
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00                                2
+00:00-07:00, 07:00-14:00                                                          1
+Not applicable, All the day                                                       1
+14:00-17:00, 17:00-21:00                                                          1
+17:00-21:00, All the day                                                          1
+00:00-07:00, 21:00-00:00, All the day                                             1
+07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                1
+00:00-07:00, All the day                                                          1
+Name: adult6, dtype: int64
+--------------------adult7--------------------
+Not applicable                                                                  173
+All the day                                                                     168
+00:00-07:00                                                                      17
+07:00-14:00                                                                      12
+00:00-07:00, 17:00-21:00, 21:00-00:00                                            10
+21:00-00:00                                                                       5
+14:00-17:00                                                                       4
+17:00-21:00                                                                       4
+00:00-07:00, 21:00-00:00                                                          3
+07:00-14:00, 14:00-17:00, 17:00-21:00                                             2
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                2
+00:00-07:00, 07:00-14:00, 21:00-00:00                                             2
+17:00-21:00, 21:00-00:00                                                          1
+14:00-17:00, All the day                                                          1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      1
+00:00-07:00, 14:00-17:00, 21:00-00:00                                             1
+07:00-14:00, 14:00-17:00                                                          1
+00:00-07:00, 07:00-14:00                                                          1
+00:00-07:00, 17:00-21:00                                                          1
+Name: adult7, dtype: int64
+--------------------adult8--------------------
+Not applicable                                                                  249
+All the day                                                                     112
+00:00-07:00                                                                      14
+00:00-07:00, 17:00-21:00, 21:00-00:00                                             7
+00:00-07:00, 21:00-00:00                                                          5
+14:00-17:00                                                                       3
+21:00-00:00                                                                       2
+07:00-14:00, 14:00-17:00, 17:00-21:00                                             2
+07:00-14:00                                                                       2
+00:00-07:00, 14:00-17:00, 17:00-21:00, 21:00-00:00                                2
+17:00-21:00                                                                       2
+14:00-17:00, All the day                                                          1
+00:00-07:00, 17:00-21:00                                                          1
+17:00-21:00, 21:00-00:00                                                          1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 21:00-00:00                                1
+00:00-07:00, 07:00-14:00, 17:00-21:00, 21:00-00:00                                1
+Not applicable, 21:00-00:00                                                       1
+00:00-07:00, 07:00-14:00, 14:00-17:00, 17:00-21:00, 21:00-00:00, All the day      1
+00:00-07:00, 07:00-14:00                                                          1
+00:00-07:00, 14:00-17:00, 17:00-21:00                                             1
+Name: adult8, dtype: int64
+--------------------roof_solar--------------------
+Do not have this on your roof    396
+Self owned                        11
+Third party owned                  2
+Name: roof_solar, dtype: int64
+--------------------perp5_roof_solar--------------------
+1.0    167
+4.0     60
+3.0     59
+2.0     56
+5.0     54
+Name: perp5_roof_solar, dtype: int64
+--------------------perp10_roof_solar--------------------
+1.0    107
+2.0     93
+3.0     71
+4.0     64
+5.0     61
+Name: perp10_roof_solar, dtype: int64
+--------------------buy_electric_vehicle--------------------
+1.0    157
+2.0     75
+3.0     75
+4.0     52
+5.0     46
+Name: buy_electric_vehicle, dtype: int64
+--------------------perp_energy--------------------
+5    336
+4     65
+3      5
+2      2
+1      1
+Name: perp_energy, dtype: int64
+--------------------perp_active--------------------
+5    308
+4     89
+3      8
+1      3
+2      1
+Name: perp_active, dtype: int64
+--------------------perp_green1--------------------
+5    297
+4    100
+3     10
+2      1
+1      1
+Name: perp_green1, dtype: int64
+--------------------perp_green2--------------------
+5    310
+4     89
+3      8
+2      1
+1      1
+Name: perp_green2, dtype: int64
+--------------------perp_reduce--------------------
+5    293
+4    102
+3     10
+1      3
+2      1
+Name: perp_reduce, dtype: int64
+--------------------elect_consume--------------------
+5    308
+4     91
+3      6
+1      2
+2      2
+Name: elect_consume, dtype: int64
+--------------------increase_ac--------------------
+5.0    183
+4.0    126
+3.0     43
+1.0     31
+2.0     18
+Name: increase_ac, dtype: int64
+--------------------turnoff_ac--------------------
+5.0    154
+4.0     94
+3.0     71
+1.0     47
+2.0     36
+Name: turnoff_ac, dtype: int64
+--------------------turnoff_water--------------------
+5.0    123
+4.0     79
+3.0     78
+1.0     74
+2.0     44
+Name: turnoff_water, dtype: int64
+--------------------stop_laundry--------------------
+5.0    234
+4.0     85
+3.0     36
+1.0     22
+2.0     21
+Name: stop_laundry, dtype: int64
+--------------------eff_lightbulb--------------------
+5    324
+4     66
+1      9
+3      6
+2      4
+Name: eff_lightbulb, dtype: int64
+--------------------eff_ac--------------------
+5    268
+4     86
+3     32
+1     14
+2      9
+Name: eff_ac, dtype: int64
+--------------------eff_cook--------------------
+5    193
+4     82
+1     67
+3     37
+2     30
+Name: eff_cook, dtype: int64
+--------------------eff_heat--------------------
+5    176
+4     93
+3     61
+1     48
+2     31
+Name: eff_heat, dtype: int64
+--------------------eff_cool--------------------
+5    151
+4    118
+3     78
+1     38
+2     24
+Name: eff_cool, dtype: int64
+--------------------elect_cook1--------------------
+5    153
+1     95
+4     82
+3     58
+2     21
+Name: elect_cook1, dtype: int64
+--------------------cool_load--------------------
+5    129
+4    109
+3     85
+1     48
+2     38
+Name: cool_load, dtype: int64
+--------------------elect_cook2--------------------
+5    169
+1     90
+4     81
+3     46
+2     23
+Name: elect_cook2, dtype: int64
+--------------------heat_load--------------------
+5    147
+4     89
+3     77
+1     66
+2     30
+Name: heat_load, dtype: int64
+--------------------light--------------------
+5    143
+4    109
+3     80
+1     49
+2     28
+Name: light, dtype: int64
+--------------------comp_tv--------------------
+5    105
+4    101
+3     83
+1     77
+2     43
+Name: comp_tv, dtype: int64
+--------------------wtp_month--------------------
+None of these payments    132
+250-400 Rupees            115
+150-250 Rupees             57
+50-150 Rupees              56
+0 - 50 Rupees              49
+Name: wtp_month, dtype: int64
